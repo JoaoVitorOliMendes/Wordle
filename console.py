@@ -62,7 +62,7 @@ def colorir_resultado(resultado: List[EstadoLetras]):
         elif letra.existe_na_palavra:
             cor = Fore.LIGHTYELLOW_EX
         else:
-            cor = Fore.WHITE
+            cor = Fore.CYAN
         letra_colorida = cor + letra.letra + Fore.RESET
         resultado_colorido.append(letra_colorida)
     return " ".join(resultado_colorido)
