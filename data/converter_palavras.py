@@ -11,7 +11,7 @@ def main():
                 palavras_com_5_letras.append(palavra)
     with open(arquivo_output, "w") as output:
         for palavra in palavras_com_5_letras:
-            output.write( + "\n")
+            output.write(palavra + '\n')
     print(f"Existem {len(palavras_com_5_letras)} palavras com 5 letras neste dicionario")
 
 if __name__ == "__main__":
