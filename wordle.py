@@ -30,7 +30,7 @@ class Wordle:
     def tentar(self, palavra: str):
         palavra_array = list(palavra.upper())
         secreta_temp = list(self.palavraSecreta.upper())
-        resultado = [EstadoLetras("")] * 5
+        resultado = [0] * 5
 
         for i in range(len(palavra_array)):
             letra = palavra_array[i]
@@ -41,7 +41,8 @@ class Wordle:
                 resultado[i] = letraEstado
 
         for i in range(len(palavra_array)):
-
+            letra = palavra_array[i]
+            letraEstado = EstadoLetras(letra)
             if letra in secreta_temp:
                 letraEstado.existe_na_palavra = True
                 secreta_temp[secreta_temp.index(letra)] = ""
